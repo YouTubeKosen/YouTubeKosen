@@ -8,11 +8,13 @@ const Footer = () => {
       <Container>
         <div className="flex flex-col items-center my-5">
           <h3 className="text-4xl lg:text-[2.5rem] font-bold tracking-tighter leading-tight text-center lg:text-left mb-5 lg:pr-4">
-            入学(登録)お願いします！
+            チャンネル登録によって入学とみなします！
           </h3>
           <div className="my-5">
           <YouTubeSubscribe />
           </div>
+        </div>
+        <div className='mx-auto max-w-[700px]'>
           <Timeline
             dataSource={{
               sourceType: 'profile',
@@ -20,7 +22,7 @@ const Footer = () => {
             }}
             options={{
               height: '700',
-              width: '400'
+              width: '700'
             }}
           />
         </div>
