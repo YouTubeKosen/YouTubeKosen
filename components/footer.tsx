@@ -1,6 +1,6 @@
 import Container from './container'
 import { Timeline } from 'react-twitter-widgets'
-import { YouTubeSubscribe } from './youtubeSubscribe'
+import YouTubeSubscribe from './youtubeSubscribe'
 
 const Footer = () => {
   return (
