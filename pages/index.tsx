@@ -19,10 +19,10 @@ export default function Index({ allPosts }: Props) {
     <>
       <Layout>
         <Head>
-          <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+          <title>{"私立YouTube高専 公式ブログ"}</title>
         </Head>
+        <Intro />
         <Container>
-          <Intro />
           {heroPost && (
             <HeroPost
               title={heroPost.title}
