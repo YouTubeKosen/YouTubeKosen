@@ -16,29 +16,18 @@ const Alert = ({ preview }: Props) => {
     >
       <Container>
         <div className="py-2 text-center text-sm">
-          {preview ? (
+          
             <>
-              This page is a preview.{' '}
+              まずは、校長先生の刺激的な授業を体感してみませんか？{' '}
               <a
-                href="/api/exit-preview"
-                className="underline hover:text-teal-300 duration-200 transition-colors"
+                href={"https://www.youtube.com/@YouTubeKosen/"}
+                className="underline hover:text-red-600 duration-200 transition-colors"
+                target={"_blank"}
               >
-                Click here
-              </a>{' '}
-              to exit preview mode.
-            </>
-          ) : (
-            <>
-              The source code for this blog is{' '}
-              <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-                className="underline hover:text-blue-600 duration-200 transition-colors"
-              >
-                available on GitHub
+                YouTubeで見る
               </a>
               .
             </>
-          )}
         </div>
       </Container>
     </div>

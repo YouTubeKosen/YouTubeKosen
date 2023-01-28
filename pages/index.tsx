@@ -5,7 +5,7 @@ import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
+import Alert from '../components/alert'
 import Post from '../interfaces/post'
 
 type Props = {
@@ -21,6 +21,7 @@ export default function Index({ allPosts }: Props) {
         <Head>
           <title>{"私立YouTube高専 公式ブログ"}</title>
         </Head>
+        <Alert preview={false} />
         <Intro />
         <Container>
           {heroPost && (
