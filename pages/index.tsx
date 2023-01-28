@@ -7,14 +7,19 @@ import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import Alert from '../components/alert'
 import Post from '../interfaces/post'
+import { useState } from 'react';
+import { LoadMore } from '../components/load-more'
 
 type Props = {
   allPosts: Post[]
 }
 
 export default function Index({ allPosts }: Props) {
+  const [ postNum, setPostNum] = useState(3)
   const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+  function handleClick() {
+    setPostNum(prevPostNum => prevPostNum + 4)
+  }
   return (
     <>
       <Layout>
@@ -34,7 +39,8 @@ export default function Index({ allPosts }: Props) {
               excerpt={heroPost.excerpt}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {<MoreStories posts={allPosts.slice(1, postNum)} />}
+          {postNum < allPosts.length && <LoadMore onClick ={handleClick}/>}
         </Container>
       </Layout>
     </>
