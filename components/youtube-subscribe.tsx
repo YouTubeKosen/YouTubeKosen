@@ -1,32 +1,32 @@
 import React, { Component } from "react";
 
 interface State {
-  initialized: boolean;
+  isLoaded: boolean;
 }
 
 export default class YouTubeSubscribe extends Component<{}, State> {
   constructor(props: {}) {
     super(props);
     this.state = {
-      initialized: false
+      isLoaded: false
     };
   }
 
-  initialized() {
+  isLoaded() {
     this.setState({
-      initialized: true
+      isLoaded: true
     });
   }
 
   componentDidMount() {
-    if (this.state.initialized) {
+    if (this.state.isLoaded) {
       return;
     }
 
     const youtubescript = document.createElement("script");
     youtubescript.src = "https://apis.google.com/js/platform.js";
     document.body.appendChild(youtubescript);
-    this.initialized();
+    this.isLoaded();
   }
 
   render() {
