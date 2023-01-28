@@ -1,6 +1,7 @@
 import cn from 'classnames'
 import Link from 'next/link'
 import Image from 'next/image'
+import { url } from '../lib/utils'
 
 type Props = {
   title: string
@@ -11,7 +12,7 @@ type Props = {
 const CoverImage = ({ title, src, slug }: Props) => {
   const image = (
     <Image
-      src={src}
+      src={url(src)}
       alt={`Cover Image for ${title}`}
       className={cn('shadow-sm', {
         'hover:shadow-lg transition-shadow duration-200': slug,
