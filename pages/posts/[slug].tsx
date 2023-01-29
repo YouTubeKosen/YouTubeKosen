@@ -11,6 +11,7 @@ import Head from 'next/head'
 import markdownToHtml from '../../lib/markdownToHtml'
 import type PostType from '../../interfaces/post'
 import Alert from '../../components/alert'
+import { url } from '../../lib/utils'
 
 type Props = {
   post: PostType
@@ -37,7 +38,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <title>
                   {post.title}
                 </title>
-                <meta property="og:image" content={post.ogImage.url} />
+                <meta property="og:image" content={url(post.ogImage.url)} />
               </Head>
               <PostHeader
                 title={post.title}
