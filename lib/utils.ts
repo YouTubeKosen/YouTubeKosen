@@ -1,5 +1,5 @@
 import getConfig from 'next/config'
-import BASE_URL from 'constants'
+import { BASE_URL } from '../lib/constants'
 
 export function url(path: string): string {
   const { publicRuntimeConfig } = getConfig() as {
