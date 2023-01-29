@@ -1,4 +1,4 @@
 export const EXAMPLE_PATH = 'blog-starter'
 export const CMS_NAME = 'Markdown'
-export const HOME_OG_IMAGE_URL =
-  '/YouTubeKosen/assets/TopOg.png'
+export const BASE_URL = 'https://youtubekosen.github.io/YouTubeKosen'
+export const HOME_OG_IMAGE_URL = BASE_URL + '/assets/TopOg.png'
