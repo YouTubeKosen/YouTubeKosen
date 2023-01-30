@@ -6,7 +6,7 @@ const Intro = () => {
   const image = (
     <Image
       src={url("/assets/@YouTubeKosen.png")}
-      alt={"私立YouTube高専トップ"}
+      alt={"私立YouTube高専ヘッダー"}
       width={1300}
       height={730}
     />

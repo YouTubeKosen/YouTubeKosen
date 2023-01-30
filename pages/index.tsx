@@ -24,7 +24,7 @@ export default function Index({ allPosts }: Props) {
     <>
       <Layout>
         <Head>
-          <title>{"私立YouTube高専 公式ブログ"}</title>
+          <title>{"私立YouTube高専"}</title>
         </Head>
         <Alert preview={false} />
         <Intro />
