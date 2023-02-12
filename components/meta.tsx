@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants'
 import { url } from '../lib/utils'
 
 const Meta = () => {
@@ -37,7 +36,6 @@ const Meta = () => {
         name="description"
         content={`私立YouTube高専は、実践的・創造的技術者を養成します。`}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   )
 }

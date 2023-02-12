@@ -9,6 +9,7 @@ import Alert from '../components/alert'
 import Post from '../interfaces/post'
 import { useState } from 'react';
 import { LoadMore } from '../components/load-more'
+import { HOME_OG_IMAGE_URL } from '../lib/constants'
 
 type Props = {
   allPosts: Post[]
@@ -22,6 +23,7 @@ export default function Index({ allPosts }: Props) {
   }
   return (
     <>
+      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       <Layout>
         <Head>
           <title>{"私立YouTube高専"}</title>
