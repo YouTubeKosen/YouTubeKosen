@@ -30,6 +30,7 @@ export default function Post({ post, morePosts, preview }: Props) {
       <NextSeo
         description={post.excerpt}
         openGraph={{
+          type: "article",
           title: post.title,
           images: [
             {

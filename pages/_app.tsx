@@ -30,7 +30,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             }}
             twitter={{
               handle: '@YouTubeKosen',
-              site: canonicalUrl,
+              site: '@YouTubeKosen',
               cardType: "summary_large_image",
             }}
           />
