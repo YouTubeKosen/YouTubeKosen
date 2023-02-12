@@ -12,6 +12,7 @@ import markdownToHtml from '../../lib/markdownToHtml'
 import type PostType from '../../interfaces/post'
 import Alert from '../../components/alert'
 import { full_path } from '../../lib/utils'
+import { NextSeo } from "next-seo";
 
 type Props = {
   post: PostType
@@ -25,37 +26,45 @@ export default function Post({ post, morePosts, preview }: Props) {
     return <ErrorPage statusCode={404} />
   }
   return (
-    <Layout preview={preview}>
-      <Alert preview={false} />
-      <Intro />
-      <Container>
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>
-                  {post.title}
-                </title>
-                <meta property="og:image" content={full_path(post.ogImage.url)} />
-                <meta
-                  name="description"
-                  content={post.excerpt}
+    <>
+      <NextSeo
+        description={post.excerpt}
+        openGraph={{
+          title: post.title,
+          images: [
+            {
+              url: full_path(post.ogImage.url),
+            },
+          ],
+        }}
+      />
+      <Layout preview={preview}>
+        <Alert preview={false} />
+        <Intro />
+        <Container>
+          {router.isFallback ? (
+            <PostTitle>Loading…</PostTitle>
+          ) : (
+            <>
+              <article className="mb-32">
+                <Head>
+                  <title>
+                    {post.title}
+                  </title>
+                </Head>
+                <PostHeader
+                  title={post.title}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                  author={post.author}
                 />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
-      </Container>
-    </Layout>
+                <PostBody content={post.content} />
+              </article>
+            </>
+          )}
+        </Container>
+      </Layout>
+    </>
   )
 }
 

@@ -32,10 +32,6 @@ const Meta = () => {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta
-        name="description"
-        content={`私立YouTube高専は、実践的・創造的技術者を養成します。`}
-      />
     </Head>
   )
 }
