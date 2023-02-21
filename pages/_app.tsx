@@ -11,6 +11,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const canonicalUrl = BASE_URL + (router.asPath === "/" ? "": router.asPath);
   return <>
           <DefaultSeo 
+            title="私立YouTube高専"
             description="私立YouTube高専は、実践的・創造的技術者を養成するYouTube史上初の高等専門学校です。"
             canonical={canonicalUrl}
             openGraph={{

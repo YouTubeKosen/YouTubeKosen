@@ -23,9 +23,6 @@ export default function Index({ allPosts }: Props) {
   return (
     <>
       <Layout>
-        <Head>
-          <title>{"私立YouTube高専"}</title>
-        </Head>
         <Alert preview={false} />
         <Intro />
         <Container>
