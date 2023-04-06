@@ -9,6 +9,7 @@ import Alert from '../components/alert'
 import Post from '../interfaces/post'
 import { useState } from 'react';
 import { LoadMore } from '../components/load-more'
+import { ShowAllPosts } from '../components/show-all-posts'
 
 type Props = {
   allPosts: Post[]
@@ -38,6 +39,7 @@ export default function Index({ allPosts }: Props) {
           )}
           {<MoreStories posts={allPosts.slice(1, postNum)} />}
           {postNum < allPosts.length && <LoadMore onClick ={handleClick}/>}
+          <ShowAllPosts onClick ={handleClick}/>
         </Container>
       </Layout>
     </>
