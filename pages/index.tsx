@@ -39,7 +39,7 @@ export default function Index({ allPosts }: Props) {
           )}
           {<MoreStories posts={allPosts.slice(1, postNum)} />}
           {postNum < allPosts.length && <LoadMore onClick ={handleClick}/>}
-          <ShowAllPosts onClick ={handleClick}/>
+          <ShowAllPosts />
         </Container>
       </Layout>
     </>
