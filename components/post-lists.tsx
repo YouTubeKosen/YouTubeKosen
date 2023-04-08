@@ -13,6 +13,7 @@ const PostLists = ({ posts }: Props) => {
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-5 gap-y-5">
                 {posts.map((post) => (
                     <PostSummary
+                        key={post.slug}
                         title={post.title}
                         date={post.date}
                         excerpt={post.excerpt}
