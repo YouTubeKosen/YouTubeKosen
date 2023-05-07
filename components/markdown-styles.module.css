@@ -15,7 +15,7 @@
 }
 
 .markdown h3 {
-  @apply text-2xl my-3 leading-snug;
+  @apply text-2xl my-3 leading-snug border-b font-medium;
 }
 
 .markdown a {
