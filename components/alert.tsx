@@ -15,7 +15,7 @@ const Alert = ({ preview }: Props) => {
       })}
     >
       <Container>
-        <div className="py-2 text-center text-sm">
+        <div className="py-2 text-center">
           
             <>
               まずは、校長先生の刺激的な授業を体感してみませんか？{' '}
