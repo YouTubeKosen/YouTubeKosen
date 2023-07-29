@@ -5,8 +5,8 @@ const Sidebar = () => {
   return (<>
     <aside className="md:max-w-[360px] p-5 md:p-10 text-white text-xl md:fixed md:top-0 md:left-0 md:h-full flex flex-col items-center md:items-start">
       <Link href="/">
-        <div className='w-48 h-48 mb-2 relative'>
-          <Image src="/assets/blog/authors/principal.png" alt="校長" fill className='absolute top-0 left-0 rounded-full'></Image>
+        <div className='w-48 h-48 mb-2 relative mx-auto'>
+          <Image src="/assets/blog/authors/principal.png" alt="校長" fill className='rounded-full'></Image>
         </div>
         <div className='text-4xl'>私立YouTube高専</div>
         <p className="text-contentLight text-2xl mb-5">
