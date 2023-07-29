@@ -7,8 +7,8 @@ const Intro = () => {
     <Image
       src={url("/assets/@YouTubeKosen.png")}
       alt={"私立YouTube高専ヘッダー"}
-      width={1300}
-      height={167}
+      width={2560}
+      height={418}
     />
   )
   return (

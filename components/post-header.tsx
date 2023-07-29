@@ -15,7 +15,7 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="flex items-center md:mb-4 text-xl font-bold">
+      <div className="flex items-center mb-4 text-xl font-bold">
         <Avatar name={author.name} picture={author.picture} />
         <DateFormatter dateString={date} />
       </div>

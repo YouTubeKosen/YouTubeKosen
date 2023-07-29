@@ -14,10 +14,8 @@ export default function Index({ allPosts }: Props) {
   return (
     <>
       <Layout>
-        <Alert preview={false} />
-        <Intro />
         <Container>
-          <PostLists posts={ allPosts }/>
+          <PostLists posts={allPosts} />
         </Container>
       </Layout>
     </>

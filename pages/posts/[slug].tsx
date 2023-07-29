@@ -41,8 +41,6 @@ export default function Post({ post, morePosts, preview }: Props) {
         }}
       />
       <Layout preview={preview}>
-        <Alert preview={false} />
-        <Intro />
         <Container>
           {router.isFallback ? (
             <PostTitle>Loading…</PostTitle>

@@ -16,7 +16,7 @@ type Props = {
 }
 
 export default function Index({ allPosts }: Props) {
-  const [ postNum, setPostNum] = useState(3)
+  const [postNum, setPostNum] = useState(3)
   const heroPost = allPosts[0]
   function handleClick() {
     setPostNum(prevPostNum => prevPostNum + 4)
@@ -24,8 +24,6 @@ export default function Index({ allPosts }: Props) {
   return (
     <>
       <Layout>
-        <Alert preview={false} />
-        <Intro />
         <Container>
           {heroPost && (
             <HeroPost
@@ -38,7 +36,7 @@ export default function Index({ allPosts }: Props) {
             />
           )}
           {<MoreStories posts={allPosts.slice(1, postNum)} />}
-          {postNum < allPosts.length && <LoadMore onClick ={handleClick}/>}
+          {postNum < allPosts.length && <LoadMore onClick={handleClick} />}
           <ShowAllPosts />
         </Container>
       </Layout>
