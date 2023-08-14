@@ -18,6 +18,10 @@
   @apply text-2xl my-3 leading-snug border-b font-medium;
 }
 
+.markdown h4 {
+  @apply text-xl my-3 leading-snug font-medium;
+}
+
 .markdown a {
   @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600;
 }
